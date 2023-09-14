@@ -4,5 +4,5 @@
 | - | - | - | - | - | - |
 | Продукт/пошукову фрази | software for detecting environmental air pollution | software for self defence | software for information search| | |
 | Oizom - Vizulaization & Analytics https://oizom.com/solution/environmental-data-terminal-air-quality-software/| 2 | | | Proprietary | |
-| Intellex - Health & Safety Management Software https://www.intelex.com/products/health-safety/| | 1 | | Proprietary | | 
+| Intellex - Health & Safety Management Software https://www.intelex.com/products/health-safety/| | 1 | | Proprietary | не має локалізації, покриває не всі аспекти особистої безбеки, відсутня статистика успішності | 
 | Google - Search & Find - google.com/| | | 4 | Proprietary | |
