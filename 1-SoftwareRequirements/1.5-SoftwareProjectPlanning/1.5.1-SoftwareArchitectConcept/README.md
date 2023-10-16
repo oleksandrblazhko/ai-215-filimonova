@@ -1,3 +1,3 @@
 ### Концептуальний опис архітектури програмного продукту
 
-<img src="architecture.jpg"/>
+<img src="achitecture.jpg"/>
