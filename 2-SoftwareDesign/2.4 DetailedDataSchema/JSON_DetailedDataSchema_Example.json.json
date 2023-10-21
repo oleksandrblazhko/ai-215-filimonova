@@ -1,0 +1,123 @@
+{
+  "title": "Your_DetailedDataSchema_Example",
+  "description": "Опис JSON-моделі з детальною схемою даних для вашої предметної області",
+  "type": "object",
+  "properties": {
+    "Scientists": {
+      "description": "Схема даних для вчених",
+      "type": "object",
+      "properties": {
+        "name": {
+          "type": "string",
+          "maxLength": 30,
+          "description": "Ім'я вченого",
+          "pattern": "^[a-zA-Z][a-zA-Z0-9._-]{6,25}$"
+        },
+        "age": {
+          "type": "integer",
+          "minimum": 1,
+          "maximum": 150,
+          "description": "Вік вченого"
+        },
+        "AirSettings": {
+          "description": "Схема даних для налаштувань повітря",
+          "type": "array",
+          "items": {
+            "type": "object",
+            "properties": {
+              "polutionLevel": {
+                "type": "number",
+                "description": "Рівень забруднення повітря"
+              },
+              "humidityLevel": {
+                "type": "number",
+                "description": "Рівень вологості повітря"
+              },
+              "PolutionTracker": {
+                "description": "Схема даних для відстеження забруднення",
+                "type": "object",
+                "properties": {
+                  "airPoluted": {
+                    "type": "boolean",
+                    "description": "Повітря забруднене"
+                  },
+                  "lowHumidity": {
+                    "type": "boolean",
+                    "description": "Низька вологість повітря"
+                  },
+                  "NotificationSender": {
+                    "description": "Схема даних для відправлення сповіщень",
+                    "type": "array",
+                    "items": {
+                      "type": "object",
+                      "properties": {
+                        "date": {
+                          "type": "string",
+                          "format": "date-time",
+                          "description": "Дата сповіщення"
+                        },
+                        "message": {
+                          "type": "string",
+                          "maxLength": 500,
+                          "pattern": "^[a-zA-Z][a-zA-Z0-9._-]{10,500}$"
+                          "description": "Повідомлення"
+                        },
+                        "type": {
+                          "type": "string",
+                          "maxLength": 30,
+                          "pattern": "^[a-zA-Z][a-zA-Z0-9._-]{6,30}$"
+                          "description": "Тип сповіщення"
+                        }
+                      },
+                      "required": [
+                        "date",
+                        "message",
+                        "type"
+                      ]
+                    }
+                  }
+                },
+                "required": [
+                  "airPoluted",
+                  "lowHumidity"
+                ]
+              },
+              "ClarityIoApiClient": {
+                "description": "Схема даних для ClarityIo API клієнта",
+                "type": "object",
+                "properties": {
+                  "airPolutionLevel": {
+                    "type": "number",
+                    "description": "Рівень забруднення повітря за ClarityIo API"
+                  },
+                  "airHumidityLevel": {
+                    "type": "number",
+                    "description": "Рівень вологості повітря за ClarityIo API"
+                  }
+                },
+                "required": [
+                  "airPolutionLevel",
+                  "airHumidityLevel"
+                ]
+              }
+            },
+            "required": [
+              "polutionLevel",
+              "humidityLevel",
+              "PolutionTracker",
+              "ClarityIoApiClient"
+            ]
+          }
+        }
+      },
+      "required": [
+        "name",
+        "age",
+        "AirSettings"
+      ]
+    }
+  },
+  "required": [
+    "Scientists"
+  ]
+}
