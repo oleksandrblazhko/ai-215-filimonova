@@ -1,0 +1,48 @@
+{
+  "Scientists": {
+    "1": {
+      "name": "Yana Filimonova",
+      "age": 20,
+      "AirSettings": [
+        {
+          "polutionLevel": 2.5,
+          "humidityLevel": 40.5,
+          "PolutionTracker": {
+            "airPoluted": true,
+            "lowHumidity": true,
+            "NotificationSender": [
+              {
+                "date": "2023-10-10T08:00:00",
+                "message": "High pollution and low humidity",
+                "type": "HIGH"
+              }
+            ]
+          },
+          "ClarityIoApiClient": {
+            "airPolutionLevel": 2.5,
+            "airHumidityLevel": 40.5
+          }
+        }
+      ]
+    },
+    "2": {
+      "name": "Oleksandr Blazhko",
+      "age": 18,
+      "AirSettings": [
+        {
+          "polutionLevel": 1.8,
+          "humidityLevel": 55,
+          "PolutionTracker": {
+            "airPoluted": false,
+            "lowHumidity": false,
+            "NotificationSender": []
+          },
+          "ClarityIoApiClient": {
+            "airPolutionLevel": 1.8,
+            "airHumidityLevel": 55
+          }
+        }
+      ]
+    }
+  }
+}
