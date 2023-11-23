@@ -1,9 +1,17 @@
 @startuml
-left to right direction
-skinparam packageStyle rectangle
-actor науковець
-rectangle Software {
-  науковець -- (auth)
-  (auth) .> (check air pollution) : include
+
+title UML-діаграма розгортання ПП
+
+skinparam componentStyle uml1
+
+node "<<Смартфон>>" as smartphone {
+	node "<<OC Android>>" {
+		component [ *.apk(Android Studio)]
+	}
 }
+
+Interface TouchScreen
+TouchScreen - smartphone
+
+
 @enduml
