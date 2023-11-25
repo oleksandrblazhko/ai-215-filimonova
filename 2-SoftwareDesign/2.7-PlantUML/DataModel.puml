@@ -1,0 +1,107 @@
+@startjson
+
+title JSON Data Model
+{
+  "type": "object",
+  "title": "Record",
+  "description": "Record of Scientists, AirSettings, NotificationSenders, PolutionTrackers, ClarityIoApiClients",
+  "properties": {
+    "Scientists": {
+      "type": "object",
+      "properties": {
+        "name": {
+          "type": "string",
+          "maxLength": 30
+        },
+        "age": {
+          "type": "integer",
+          "minimum": 1
+        },
+        "AirSettings": {
+          "type": "array",
+          "items": {
+            "type": "object",
+            "properties": {
+              "polutionLevel": {
+                "type": "number"
+              },
+              "humidityLevel": {
+                "type": "number"
+              },
+              "PolutionTracker": {
+                "type": "object",
+                "properties": {
+                  "airPoluted": {
+                    "type": "boolean"
+                  },
+                  "lowHumidity": {
+                    "type": "boolean"
+                  },
+                  "NotificationSender": {
+                    "type": "array",
+                    "items": {
+                      "type": "object",
+                      "properties": {
+                        "date": {
+                          "type": "string",
+                          "format": "date-time"
+                        },
+                        "message": {
+                          "type": "string",
+                          "maxLength": 500
+                        },
+                        "type": {
+                          "type": "string",
+                          "maxLength": 30
+                        }
+                      },
+                      "required": [
+                        "date",
+                        "message",
+                        "type"
+                      ]
+                    }
+                  }
+                },
+                "required": [
+                  "airPoluted",
+                  "lowHumidity"
+                ]
+              },
+              "ClarityIoApiClient": {
+                "type": "object",
+                "properties": {
+                  "airPolutionLevel": {
+                    "type": "number"
+                  },
+                  "airHumidityLevel": {
+                    "type": "number"
+                  }
+                },
+                "required": [
+                  "airPolutionLevel",
+                  "airHumidityLevel"
+                ]
+              }
+            },
+            "required": [
+              "polutionLevel",
+              "humidityLevel",
+              "PolutionTracker",
+              "ClarityIoApiClient"
+            ]
+          }
+        }
+      },
+      "required": [
+        "name",
+        "age",
+        "AirSettings"
+      ]
+    }
+  },
+  "required": [
+    "Scientists"
+  ]
+}
+@endjson

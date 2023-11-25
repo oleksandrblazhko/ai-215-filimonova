@@ -1,0 +1,13 @@
+@startuml
+title Activity Diagram
+
+start
+:Scientiest opens app;
+:Check air quality;
+  if (Data is present?) then (Yes)
+    :Display of the air quality level as notification and message;
+  else (No)
+    :Displaying a message about missing data of air quality;
+  endif
+stop
+@enduml

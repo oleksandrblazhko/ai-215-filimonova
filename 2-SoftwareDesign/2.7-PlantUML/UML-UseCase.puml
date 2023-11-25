@@ -1,0 +1,9 @@
+@startuml
+left to right direction
+skinparam packageStyle rectangle
+actor науковець
+rectangle Software {
+  науковець -- (auth)
+  (auth) .> (check air pollution) : include
+}
+@enduml

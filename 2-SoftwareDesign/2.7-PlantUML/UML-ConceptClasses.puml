@@ -1,0 +1,37 @@
+@startuml
+hide circle
+title UML Concept Classes
+
+Class Scientist{
+    name
+    age
+}
+
+Class AirSettings {
+    polutionLevel
+    humidityLevel
+}
+
+Class PolutionTracker {
+    airPoluted
+    lowHumidity
+}
+
+Class ClarityApiClient {
+    getAirPolutionLevel
+    getAirHumidityLevel
+}
+
+
+Class NotificationSender {
+    date
+    message
+    type
+}
+
+Scientist "1" --> "*" AirSettings: manage
+AirSettings"1" --> "1" PolutionTracker: get
+PolutionTracker"1" --> "1" ClarityApiClient: get
+PolutionTracker"*" --> "1" NotificationSender : create
+NotificationSender "1" --> "*" Scientist : send
+@enduml
