@@ -34,8 +34,7 @@ public class MainActivity extends AppCompatActivity {
 
     private AirSettingsRepository airSettingsRepository;
 
-    @Override
-    protected void onCreate(Bundle savedInstanceState) {
+    protected void manageAirSettings(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
 
